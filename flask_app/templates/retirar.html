@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Retirar herramienta</title>
+</head>
+<body>
+    <h1>📤 Retirar herramienta</h1>
+
+    <form method="post">
+        <label>Herramienta:</label><br>
+        <select name="herramienta_id" required>
+            {% for herramienta in herramientas %}
+            <option value="{{ herramienta[0] }}">{{ herramienta[1] }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label>Responsable:</label><br>
+        <select name="responsable_id" required>
+            {% for responsable in responsables %}
+            <option value="{{ responsable[0] }}">{{ responsable[1] }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label>Cantidad a retirar:</label><br>
+        <input type="number" name="cantidad" min="1" required><br><br>
+
+        <label>Observaciones (opcional):</label><br>
+        <textarea name="observaciones" rows="4" cols="40"></textarea><br><br>
+
+        <button type="submit">Confirmar retiro</button>
+    </form>
+
+    <br>
+    <a href="/">⬅️ Volver al inicio</a>
+</body>
+</html>

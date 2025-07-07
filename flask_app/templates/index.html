@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Herramientas</title>
+</head>
+<body>
+    <h1>🧰 Herramientas disponibles</h1>
+    <a href="/agregar">➕ Agregar herramienta</a> |
+    <a href="/retirar">🛠️ Retirar</a> |
+    <a href="/devolver">🔁 Devolver</a>
+    <ul>
+        {% for h in herramientas %}
+        <li>{{ h[1] }} - {{ h[2] }} unidades - {{ h[3] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

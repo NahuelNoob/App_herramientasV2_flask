@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Herramienta</title>
+</head>
+<body>
+    <h1>➕ Agregar nueva herramienta</h1>
+
+    <form method="post">
+        <label>Nombre:</label><br>
+        <input type="text" name="nombre" required><br><br>
+
+        <label>Cantidad:</label><br>
+        <input type="number" name="cantidad" min="1" required><br><br>
+
+        <label>Ubicación:</label><br>
+        <select name="ubicacion" required>
+            <option value="">Seleccionar</option>
+            <option value="Taller">Taller</option>
+            <option value="Galpon">Galpón</option>
+            <option value="Taller_interno">Taller Interno</option>
+        </select><br><br>
+
+        <label>Descripción:</label><br>
+        <textarea name="descripcion" rows="4" cols="40"></textarea><br><br>
+
+        <button type="submit">Guardar herramienta</button>
+    </form>
+
+    <br>
+    <a href="/">⬅️ Volver al listado</a>
+</body>
+</html>
